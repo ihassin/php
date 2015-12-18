@@ -7,6 +7,7 @@ The roles are
 - ruby2
 - logrotate
 - swapfile
+- php
 - webserver
 
 # git
@@ -29,20 +30,19 @@ git clone https://github.com/ihassin/php.git
 
 ## Provisioning the VMs
 
-Vagrantfile assumes a base Ubuntu box exists.
-
-Initialize Vagrant:
-
-```
-vagrant init
-```
-
-and change the box name to match the box file you chose.
+### Setting up the IP
 
 If you want to change the VM's IP address, or networking in general, please edit Vagrantfile to suite your needs.
 
 Once you have done that, you can ```ssh deploy@33.33.33.37``` with the password found in common/vars/main.yml
 If you want to access the VM using your own ssh key, insert your public key in common/templates/ssh_keys.pub
+
+
+### Setting up your public key to access the box easily
+
+Add your public key to roles/common/ita.pub
+
+### Bring up the machine
 
 You can then bring up the box for configuring by issuing the following command:
 
@@ -54,6 +54,14 @@ vagrant up|provision
 
 ```
 ansible-playbook -i inventory.ini playbook.yml -u root
+```
+
+# Using Cucumber instead
+
+You can run cucumber at the root of the project to let the provisioning story play out!
+
+```
+cucumber
 ```
 
 # Contributing
