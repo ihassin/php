@@ -7,6 +7,5 @@ Feature: VM is created
     Then I can log on as "deploy"
 
   Scenario: Accessing the web
-    When I start the web service
-    And I navigate to it
+    When I navigate to it
     Then I see "Hello PHP World!"

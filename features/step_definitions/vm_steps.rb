@@ -11,11 +11,7 @@ Then(/^I can log on as "(.*?)"$/) do |user|
   expect $?.success? == true
 end
 
-When(/^I start the web service$/) do
-  # system('cd .. && cap staging deploy && cap staging deploy:restart')
-end
-
-And(/^I navigate to it$/) do
+When(/^I navigate to it$/) do
   visit "http://#{@host}"
 end
 
