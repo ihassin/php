@@ -1,3 +1,3 @@
 user: deploy
-password: raindrop
-db_prefix: news
+password: rainphp
+db_prefix: php

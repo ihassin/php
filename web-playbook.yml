@@ -6,4 +6,5 @@
     - common
     - nickhammond.logrotate
     - joshualund.ruby-2_1
+    - db
     - webserver
