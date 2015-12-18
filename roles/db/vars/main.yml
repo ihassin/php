@@ -1,0 +1,3 @@
+user: deploy
+password: raindrop
+db_prefix: news

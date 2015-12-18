@@ -1,0 +1,13 @@
+logrotate_scripts:
+  - name: PHPApp
+    path: "/home/deploy/log/*.log"
+    options:
+      - weekly
+      - size 25M
+      - missingok
+      - compress
+      - delaycompress
+      - copytruncate
+      - rotate 10
+      - su deploy www-data
+      - create 644 deply www-data

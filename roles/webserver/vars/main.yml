@@ -1,0 +1,5 @@
+---
+user: deploy
+appname: php
+domain: stage.php.com
+
