@@ -27,6 +27,7 @@ git clone https://github.com/ihassin/php.git
 * Please install VirtualBox from [here](https://www.virtualbox.org/wiki/Downloads).
 * Please install Vagrant from [here](https://docs.vagrantup.com/v2/installation).
 * Please install Ansible from [here](http://docs.ansible.com/ansible/intro_installation.html#getting-ansible).
+* Please install Bundler from [here](http://bundler.io) if you intend to run Cucumber
 
 ## Provisioning the VMs
 
@@ -70,6 +71,7 @@ ansible-playbook -i inventory-stage.ini web-playbook.yml -u root
 You can run cucumber at the root of the project to let the provisioning story play out!
 
 ```
+bundle install
 cucumber
 ```
 
@@ -88,4 +90,3 @@ MIT
 # Code of conduct
 
 Please see local CODE_OF_CONDUCT.md file.
-
