@@ -34,9 +34,6 @@ git clone https://github.com/ihassin/php.git
 
 If you want to change the VM's IP address, or networking in general, please edit Vagrantfile to suit your needs.
 
-Once you have done that, you can ```ssh deploy@33.33.33.37``` with the password found in roles/common/vars/main.yml
-If you want to access the VM using your own ssh key, insert your public key in common/templates/ssh_keys.pub
-
 ## /etc/hosts
 
 Add an entry to your /etc/hosts file so that Ansible will find the VM.
@@ -44,6 +41,11 @@ Add an entry to your /etc/hosts file so that Ansible will find the VM.
 ```
 33.33.33.37 	stage.php.com
 ```
+
+Once you have done that, you can ```ssh deploy@33.33.33.37``` with the password found in roles/common/vars/main.yml
+If you want to access the VM using your own ssh key, insert your public key in common/templates/ssh_keys.pub.
+
+Log in using ```ssh deploy@stage.php.com```
 
 ### Setting up your public key to access the box easily
 
@@ -60,7 +62,7 @@ vagrant up|provision
 # Running Ansible standalone
 
 ```
-ansible-playbook -i inventory.ini playbook.yml -u root
+ansible-playbook -i inventory-stage.ini web-playbook.yml -u root
 ```
 
 # Using Cucumber instead
