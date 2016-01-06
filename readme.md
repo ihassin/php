@@ -84,6 +84,9 @@ cd ~
 phpunit --verbose test
 ```
 
+# CodeIgniter included
+
+See CodeIgniter run by navigating to ```http://stage.php.com/CodeIgniter-3.0.3/index.php```
 
 # Contributing
 

@@ -11,6 +11,7 @@
       - firefox
       - xvfb
       - phpunit
+      - unzip
 
   - name: Set up cron for logrotate
     cron: name="{{appname}} Logrotate" job="logrotate -v /etc/logrotate.d/{{appname}}" state=present special_time=daily user={{user}}
@@ -21,4 +22,12 @@
   - name: Copy unit test to root
     copy: src=test.php dest=/home/{{user}}
 
+  - name: Copy CodeIgniter to root
+    copy: src=CodeIgniter-3.0.3.zip dest=/home/{{user}}
+
+  - name: Unarchive CodeIgniter to web root
+    unarchive: src=CodeIgniter-3.0.3.zip dest=/var/www/phpweb
+
+  - name: Configure CodeIgniter
+    copy: src=ignite_config.php dest=/var/www/phpweb/CodeIgniter-3.0.3/application/config/config.php
 

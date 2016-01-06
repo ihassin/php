@@ -2,26 +2,27 @@
 - hosts: webserver
 
   roles:
-    - { role: kamaln7.swapfile, swapfile_size: 1GB, swapfile_swappiness: 10 }
-    - common
-    - nickhammond.logrotate
-    - joshualund.ruby-2_1
-    - db
-    - role: EHER.web
-      eher_web_name: 'phpweb'
-      eher_web_server_name: 'stage.php.com'
-      eher_web_root: '/var/www/phpweb'
-      eher_web_try_files: "$uri $uri/ /index.php?url=$uri&$args"
-      eher_web_rewrite:
-        - /css/main.css /min/?g=css
-        - /js/head.js /min/?g=js_head
-        - /js/body.js /min/?g=js_body
-      eher_web_php_enabled: true
-      eher_web_php_params:
-        - SYMFONY__DATABASE__HOST "localhost"
-        - SYMFONY__DATABASE__NAME php
-        - SYMFONY__DATABASE__USER deploy
-        - SYMFONY__DATABASE__PASSWORD "rainphp"
+#    - { role: kamaln7.swapfile, swapfile_size: 1GB, swapfile_swappiness: 10 }
+#    - common
+#    - nickhammond.logrotate
+#    - joshualund.ruby-2_1
+#    - db
+#    - role: EHER.web
+#      eher_web_name: 'phpweb'
+#      eher_web_server_name: 'stage.php.com'
+#      eher_web_root: '/var/www/phpweb'
+#      eher_web_try_files: "$uri $uri/ /index.php?url=$uri&$args"
+#      eher_web_rewrite:
+#        - /css/main.css /min/?g=css
+#        - /js/head.js /min/?g=js_head
+#        - /js/body.js /min/?g=js_body
+#      eher_web_php_enabled: true
+#      eher_web_php_params:
+#        - SYMFONY__DATABASE__HOST "localhost"
+#        - SYMFONY__DATABASE__NAME php
+#        - SYMFONY__DATABASE__USER deploy
+#        - SYMFONY__DATABASE__PASSWORD "rainphp"
+#    - webserver
+#    - geerlingguy.composer
+#    - webstandardcss.phpunit
     - webserver
-    - geerlingguy.composer
-    - webstandardcss.phpunit
