@@ -75,6 +75,16 @@ bundle install
 cucumber
 ```
 
+# PHPUnit included
+
+See PHPUnit run by running
+
+```
+cd ~
+phpunit --verbose test
+```
+
+
 # Contributing
 
 1. Fork it (https://github.com/ihassin/php/fork)

@@ -10,10 +10,15 @@
       - build-essential
       - firefox
       - xvfb
+      - phpunit
 
   - name: Set up cron for logrotate
     cron: name="{{appname}} Logrotate" job="logrotate -v /etc/logrotate.d/{{appname}}" state=present special_time=daily user={{user}}
 
   - name: Copy hello world php page
     copy: src=index.php dest=/var/www/phpweb
+
+  - name: Copy unit test to root
+    copy: src=test.php dest=/home/{{user}}
+
 

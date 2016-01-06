@@ -1,0 +1,20 @@
+---
+
+dependencies:
+
+  - { role: geerlingguy.composer }
+
+galaxy_info:
+
+  author:              webstandardcss
+  description:         A phpunit role dependent on geerlingguy.composer
+  company:             webstandardcss
+  license:             MIT
+  min_ansible_version: 1.7.0
+  platforms:
+    - name: Debian
+  versions:
+    - wheezy
+  categories:
+    - development
+    - web

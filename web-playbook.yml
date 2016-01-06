@@ -23,3 +23,5 @@
         - SYMFONY__DATABASE__USER deploy
         - SYMFONY__DATABASE__PASSWORD "rainphp"
     - webserver
+    - geerlingguy.composer
+    - webstandardcss.phpunit
