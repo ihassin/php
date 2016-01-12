@@ -57,16 +57,17 @@ Add your public key to roles/common/files/ita.pub
 You can then bring up the box for configuring by issuing the following command:
 
 ```
-vagrant up|provision
+vagrant up|provision --provider virtualbox 
 ```
 
 # Running Ansible standalone
 
+Once the VM is up, you can reprovision using Ansible without Vagrant by typing
 ```
-ansible-playbook -i inventory-stage.ini web-playbook.yml -u root
+ansible-playbook -i inventory-stage.ini web-playbook.yml -u deploy -s
 ```
 
-# Using Cucumber instead
+# Using Cucumber
 
 You can run cucumber at the root of the project to let the provisioning story play out!
 
